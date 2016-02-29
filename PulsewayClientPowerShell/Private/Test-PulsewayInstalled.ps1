@@ -16,18 +16,18 @@
     
         if (Test-Connection -ComputerName $Target -Count 1 -Quiet)
         {
-            if (Test-Path -Path @PulsewayDirs)
+            if (Test-Path -Path $PulsewayDirs)
             {
                 $true
             }
             else
             {
-                throw "Could not find Pulseway on $Target, it may have been installed to a non-default location."
+                $false
             }
         }
         else
         {
-            throw "The computer $Target is either offline or does not exist. Please check that the value is correct and try again."
+            $false
         }
     }
 }
