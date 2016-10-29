@@ -1,2 +1,2 @@
-# Pulseway Client PowerShell
+# PSPulseway
 A PowerShell module for configuring Pulseway clients 
